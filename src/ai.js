@@ -19,10 +19,10 @@ export async function getRecipeFromGemini(ingredientsArr) {
             contents: ` ${SYSTEM_PROMPT} I have ${ingredientsString}. Please give me a recipe you'd recommend I make.`,
         });
 
-        return response ? response.text : "No se pudoo generar una receta"
+        return response ? response.text : "It was not possible to generate a recipe"
     } catch (error) {
-        console.error("Error al generar receta", error);
-        return "Hubo un error al generar la receta";
+        console.error("Error generating recipe.", error);
+        return "There was an error generating the recipe.";
     }
   
 }
