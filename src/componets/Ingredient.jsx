@@ -1,3 +1,5 @@
+import trash_icon from '/public/assets/trash-can.png'
+
 export default function Ingredient({ ingredient, index, deleteIngredient }) {
     return (
         <li className="ingredient" key={index}>
@@ -6,7 +8,7 @@ export default function Ingredient({ ingredient, index, deleteIngredient }) {
                 onClick={() => deleteIngredient(index)}
                 className="delete-button"
             >
-                <img src="public/assets/trash-can.png" alt="Trash can icon" />
+                <img src={trash_icon} alt="Trash can icon" />
             </button>
         </li>
     );
