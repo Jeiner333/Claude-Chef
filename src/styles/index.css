@@ -1,0 +1,221 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: #272727;
+    color: white;
+    font-family: "Inter", sans-serif;
+    margin: 10px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+}
+
+.app {
+    width: calc(100vw - 20px);
+    display: flex;
+    flex-direction: column;
+    background-color: #101010;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 3px #999;
+    justify-content: center;
+    align-items: center;
+}
+
+.app-header {
+    background-color: blueviolet;
+    padding: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom: 1px solid #999;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.app-main {
+    padding: 0 80px;
+    padding-top: 80px;
+    padding-bottom: 40px;
+    width: 100%;
+    max-width: 900px;
+}
+
+header > nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+nav > img {
+    width: 40px;
+    transition: transform 0.2s ease;
+}
+
+nav > img:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+nav > span {
+    font-size: 25px;
+    transition: transform 0.2s ease;
+}
+
+nav > span:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.app-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.app-section-form {
+    display: flex;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.form-text {
+    all: unset;
+    background-color: #272727;
+    padding: 10px 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 523px;
+    border: 5px solid transparent;
+}
+
+.form-button {
+    border: none;
+    border-radius: 10px;
+    max-width: 200px;
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+    padding: 10px 30px;
+    white-space: nowrap;
+    transition: transform 0.2s ease;
+    border: 5px solid transparent;
+}
+
+.form-button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.form-text:focus {
+    border: 5px solid blueviolet;
+}
+
+.app-main-ingredients {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.app-main-generateSection {
+    background-color: #272727;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+}
+
+.generateSection-button {
+    border: none;
+    border-radius: 10px;
+    box-sizing: content-box;
+    height: 60px;
+    max-width: 150px;
+    padding: 0 50px;
+    transition: transform 0.2s ease;
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+
+.generateSection-button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.app-main-ingredients2 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.app-main-ingredients > header {
+    max-width: 800px;
+}
+
+.app-main-ingredients2 > header {
+    max-width: 800px;
+}
+
+.app-main-ingredients > main > ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding-left: 0;
+    gap: 20px;
+}
+
+.ingredient {
+    display: flex;
+    position: relative;
+    padding-left: 1rem;
+    list-style-position: inside;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+}
+
+.ingredient::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: white;
+}
+
+.delete-button {
+    border: none;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 30px;
+    transition: transform 0.2s ease;
+}
+
+.delete-button > img {
+    width: 16px;
+}
+
+.delete-button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    background-color: rgb(255, 122, 122);
+}
+
+@media (max-width: 600px) {
+    .app-section-form {
+        flex-direction: column;
+    }
+
+    .app-main-generateSection {
+        flex-direction: column;
+        align-items: center;
+    }
+}
