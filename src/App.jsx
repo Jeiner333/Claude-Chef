@@ -10,10 +10,12 @@ export default function App() {
     const [ingredientList, setIngredientList] = useState([]);
     const [recipeShown, setRecipeShown] = useState(false);
     const [recipe, setRecipe] = useState(null)
+    const [firstRecipe, setFirstRecipe] = useState(true)
 
     async function getRecipe() {
-        setRecipe("### Preparando...")
+        setRecipe("### Preparing...")
         setRecipeShown(true)
+        firstRecipe && setFirstRecipe(false)
         const recipeMarkdown = await getRecipeFromGemini(ingredientList)
         setRecipe(recipeMarkdown)
     }
@@ -42,6 +44,7 @@ export default function App() {
                     deleteIngredient={deleteIngredient}
                     setRecipeShown={setRecipeShown}
                     getRecipe={getRecipe}
+                    firstRecipe={firstRecipe}
                 />
                 {recipeShown && <Recipe markdownText={recipe}/>}
             </main>

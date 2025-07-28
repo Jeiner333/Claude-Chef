@@ -1,6 +1,11 @@
-export default function GenerateSection({ setRecipeShown, getRecipe }) {
+export default function GenerateSection({
+    setRecipeShown,
+    getRecipe,
+    firstRecipe,
+}) {
+
     const handleClick = () => {
-        getRecipe()
+        getRecipe();
     };
 
     return (
@@ -10,7 +15,7 @@ export default function GenerateSection({ setRecipeShown, getRecipe }) {
                 <p>Generate a recipe from your list of ingredients</p>
             </div>
             <button onClick={handleClick} className="generateSection-button">
-                Get a recipe
+                {firstRecipe ? "Get a Recipe" : "Get a new recipe"}
             </button>
         </section>
     );

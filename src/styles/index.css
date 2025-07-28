@@ -209,6 +209,21 @@ nav > span:hover {
     background-color: rgb(255, 122, 122);
 }
 
+.app-main-recipe {
+    margin-top: 20px;
+    background-color: #272727;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.app-main-recipe > h2 {
+    margin: 0;
+}
+
+.app-main-recipe > hr {
+    margin-bottom: 40px;
+}
+
 @media (max-width: 600px) {
     .app-section-form {
         flex-direction: column;

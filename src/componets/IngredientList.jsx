@@ -6,6 +6,7 @@ export default function Ingredients({
     deleteIngredient,
     setRecipeShown,
     getRecipe,
+    firstRecipe
 }) {
     const ingredientsList = () => {
         return ingredients.map((item, index) => {
@@ -35,7 +36,7 @@ export default function Ingredients({
                     </section>
 
                     {ingredients.length >= 3 ? (
-                        <GenerateSection setRecipeShown={setRecipeShown} getRecipe={getRecipe} />
+                        <GenerateSection setRecipeShown={setRecipeShown} getRecipe={getRecipe} firstRecipe={firstRecipe} />
                     ) : (
                         <h2>Add 3 or more ingredients for get a recipe!</h2>
                     )}
