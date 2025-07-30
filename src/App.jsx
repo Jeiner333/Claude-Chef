@@ -3,6 +3,7 @@ import Form from "./componets/Form";
 import IngredientList from "./componets/IngredientList";
 import Recipe from "./componets/Recipe";
 import { getRecipeFromGemini } from "./ai"
+import Footer from "./componets/Footer";
 
 import { useState } from "react";
 
@@ -48,6 +49,7 @@ export default function App() {
                 />
                 {recipeShown && <Recipe markdownText={recipe}/>}
             </main>
+            <Footer/>
         </main>
     );
 }

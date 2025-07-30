@@ -13,7 +13,7 @@ export default function Ingredients({
             return (
                 <Ingredient
                     ingredient={item}
-                    index={index}
+                    key={index}
                     deleteIngredient={deleteIngredient}
                 />
             );

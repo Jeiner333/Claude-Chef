@@ -1,8 +1,8 @@
 import trash_icon from '/public/assets/trash-can.png'
 
-export default function Ingredient({ ingredient, index, deleteIngredient }) {
+export default function Ingredient({ ingredient, key, deleteIngredient }) {
     return (
-        <li className="ingredient" key={index}>
+        <li className="ingredient" key={key}>
             {ingredient}
             <button
                 onClick={() => deleteIngredient(index)}
