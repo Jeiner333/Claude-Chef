@@ -97,6 +97,7 @@ nav > span:hover {
 
 .form-text {
     all: unset;
+    box-sizing: border-box;
     background-color: #272727;
     padding: 10px 20px;
     border-radius: 10px;
@@ -241,7 +242,7 @@ nav > span:hover {
     }
 
     .app-main {
-        padding: 0 40px;
+        padding: 0 15px;
         padding-top: 80px;
         padding-bottom: 40px;
     }

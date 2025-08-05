@@ -14,6 +14,7 @@ export default function Ingredients({
                 <Ingredient
                     ingredient={item}
                     key={index}
+                    index={index}
                     deleteIngredient={deleteIngredient}
                 />
             );
